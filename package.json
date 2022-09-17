@@ -4,7 +4,8 @@
     "description": "",
     "main": "index.js",
     "dependencies": {
-        "express": "^4.15.4"
+        "express": "^4.15.4",
+        "swagger-ui-express": "^4.5.0"
     },
     "devDependencies": {
         "nodemon": "^1.17.3"

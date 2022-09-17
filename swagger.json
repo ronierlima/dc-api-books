@@ -1,0 +1,65 @@
+{
+  "swagger": "2.0",
+  "paths": {
+    "/": {
+      "get": {
+        "tags": ["Books"],
+        "summary": "Retorna todos os livros",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Page"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Book": {
+      "properties": {
+        "id": {
+          "type": "integer",
+          "uniqueItems": true
+        },
+        "title": {
+          "type": "string"
+        },
+        "authors": {
+          "type": "string"
+        },
+        "average_rating": {
+          "type": "integer"
+        },
+        "publication_date": {
+          "type": "date"
+        },
+        "publisher": {
+          "type": "string"
+        }
+      }
+    },
+    "Books": {
+      "type": "array",
+      "$ref": "#/definitions/Book"
+    },
+    "Page": {
+      "properties": {
+        "currentPage": {
+          "type": "integer"
+        },
+        "totalElements": {
+          "type": "integer"
+        },
+        "totalPages": {
+          "type": "integer"
+        },
+        "content": {
+          "type": "array",
+          "$ref": "#/definitions/Book"
+        }
+      }
+    }
+  }
+}

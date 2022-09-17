@@ -1,4 +1,5 @@
 const express = require("express");
+const swaggerUi = require('swagger-ui-express'),swaggerDocument = require('./swagger.json');
 
 const books = require("./books");
 const app = express();
@@ -28,6 +29,12 @@ app.get("/", (req, res) => {
     res.status(500);
   }
 });
+
+app.use(
+  '/api-docs',
+  swaggerUi.serve, 
+  swaggerUi.setup(swaggerDocument)
+);
 
 app.listen(9000, () => {
   console.log(`Starting Server on Port ${port}`);
