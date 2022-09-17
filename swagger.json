@@ -5,6 +5,20 @@
       "get": {
         "tags": ["Books"],
         "summary": "Retorna todos os livros",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "type": "integer",
+            "required": false
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "type": "integer",
+            "required": false
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK",
