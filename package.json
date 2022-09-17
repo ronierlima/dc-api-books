@@ -11,7 +11,8 @@
     },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "nodemon ./bin/server.js"
+        "start": "nodemon ./bin/server.js",
+        "build": "nodemon ./bin/server.js"
     },
     "keywords": [],
     "author": "",
