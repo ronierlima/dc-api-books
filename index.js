@@ -18,7 +18,7 @@ app.get("/", (req, res) => {
       );
 
       res.status(200).json({
-        currentPage: 0,
+        currentPage: pagina,
         totalElements: books.length,
         totalPages: totalPages,
         content: booksFilter,
