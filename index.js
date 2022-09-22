@@ -1,9 +1,14 @@
 const express = require("express");
+const cors = require('cors');
 const swaggerUi = require('swagger-ui-express'),swaggerDocument = require('./swagger.json');
 
 const books = require("./books");
 const app = express();
 const port = 9000;
+
+app.use(cors({
+  origin: '*'
+}));
 
 app.get("/", (req, res) => {
   try {
